@@ -10,11 +10,8 @@ comments: false
 
 ## Who am I?
 
-<figure width="50%" height="50%">
-	<img src="/assets/img/me.jpg" width="50%" height="50%">
-	<figcaption> "Such a cool guy!" </figcaption>
-</figure>
-
+<img src="/assets/img/me.jpg" width="200" height="200">
+<figcaption> "Such a cool guy!" </figcaption>
 
 
 I'm a Data Scientist from Brazil! I'm passionate about data science, machine learning and astronomy/astrophysics. I graduated in Electrical Engineering from University of Campinas (UNICAMP), and I had the opportunity to study abroad in Australia, Melbourne, on Monash University.

@@ -11,7 +11,7 @@ comments: false
 ## Who am I?
 
 <figure width="50%" height="50%">
-	<a href="/assets/img/me.jpg" width="50%" height="50%"><img src="/assets/img/me.jpg" width="50%" height="50%"></a>
+	<img src="/assets/img/me.jpg" width="50%" height="50%">
 	<figcaption> "Such a cool guy!" </figcaption>
 </figure>
 

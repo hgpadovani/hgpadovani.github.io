@@ -10,7 +10,10 @@ comments: false
 
 ## Who am I?
 
-![Me](/assets/img/me.jpg){width=250px}
+<figure width="50%" height="50%">
+	<a href="/assets/img/me.jpg" width="50%" height="50%"><img src="/assets/img/me.jpg" width="50%" height="50%"></a>
+	<figcaption> "Such a cool guy!" </figcaption>
+</figure>
 
 
 

@@ -8,9 +8,9 @@ comments: false
     
 <center> Hello, I'm Hugo Padovani =) </center>
 
-## How am I?
+## Who am I?
 
-![Me]('/assets/img/me.jpg'){width=250px}
+![Me](/assets/img/me.jpg){width=250px}
 
 
 

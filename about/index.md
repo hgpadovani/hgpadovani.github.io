@@ -10,7 +10,7 @@ comments: false
 
 ## Who am I?
 
-<img src="/assets/img/me.jpg" width="200" height="200">
+<img src="/assets/img/me200.jpg" width="200" height="200">
 <figcaption> "Such a cool guy!" </figcaption>
 
 

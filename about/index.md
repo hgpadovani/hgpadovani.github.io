@@ -10,10 +10,9 @@ comments: false
 
 ## How am I?
 
-<figure>
-	<a href="/assets/img/me.jpg" width="50%" height="50%"><img src="/assets/img/me.jpg" width="50%" height="50%"></a>
-	<figcaption> "Such a cool guy!" </figcaption>
-</figure>
+![Me]('/assets/img/me.jpg'){width=250px}
+
+
 
 I'm a Data Scientist from Brazil! I'm passionate about data science, machine learning and astronomy/astrophysics. I graduated in Electrical Engineering from University of Campinas (UNICAMP), and I had the opportunity to study abroad in Australia, Melbourne, on Monash University.
 

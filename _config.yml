@@ -4,7 +4,7 @@ bio:                'A blog for sharing my experiments on Data Science, Machine 
 description:        "This is my blog."
 reading_time:       true
 words_per_minute:   200
-logo:               'assets/img/logo.png'
+logo:               'assets/img/nn-logo.png'
 background:         'assets/img/background.jpg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
@@ -26,7 +26,7 @@ sass:
   style:            compressed
 
 # Comments
-disqus_shortname:   taylantatli
+disqus_shortname:   hgpadovani
 
 # Social
 # if you don't have any of social below, comment the line.
@@ -37,20 +37,20 @@ disqus_shortname:   taylantatli
   #ad-client:
   #ad-slot:
 #bing-verify:
-#email:
-twitter:            username
-facebook:           username
-github-url:         username
+email:              hgpadovani@gmail.com
+#twitter:            username
+facebook:           https://www.facebook.com/hugo.padovani
+github-url:         https://github.com/hgpadovani
 #stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
 #linkedin:          username
 #xing:              username
-instagram:          username
+instagram:          https://www.instagram.com/hgpadovani/
 #lastfm:            username
 #tumblr:            username
 #medium:            '@username'
 #pinterest:         username
 #foursquare:        username
-steam:              username
+steam:              hgpadovani
 #dribbble:          username
 #youtube:           username
 #youtube-channel:   channel

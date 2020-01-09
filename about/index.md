@@ -11,7 +11,7 @@ comments: false
 ## How am I?
 
 <figure>
-	<a href="/assets/img/me.jpg"><img src="/assets/img/me.jpg" width="400" height="400"></a>
+	<a href="/assets/img/me.jpg"><img src="/assets/img/me.jpg" width="150" height="150"></a>
 	<figcaption> "Such a cool guy =)" </figcaption>
 </figure>
 

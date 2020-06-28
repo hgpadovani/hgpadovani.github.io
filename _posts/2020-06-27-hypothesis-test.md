@@ -16,7 +16,7 @@ comments: true
 
 In this post, I'll try to explain the concept of p-values from a different perspective. 
 
-I believe everyone has seen hypothesis test in any statistical discipline. We all have been presented with the concept of p-value, alpha (or significance) level, power, null hypothesis and alternativa hypothesis, t-tests, ANOVA, among other fancy names for simple concepts.
+I believe everyone has seen hypothesis test in any statistical discipline. We all have been presented with the concept of p-value, alpha (or significance) level, power, null hypothesis and alternative hypothesis, t-tests, ANOVA, among other fancy names for simple concepts.
 
 We also had to perform some few hypothesis tests ourselfs, trying to grasp how to do it and how to interpret it right.
 
@@ -40,7 +40,7 @@ $$ f(x) = \frac{1}{\sigma\sqrt{2.\pi}} \exp \frac{-1}{2}\left(\frac{x - \mu}{\si
 where:
 - $$\mu$$: the mean of the distribution;
 - $$\sigma$$: the variance;
-- x: out sample vctor;
+- x: out sample vector;
 
 With this, we can create some random variable X and sample from it.
 
@@ -71,19 +71,18 @@ plt.xlabel("Large sample size")
 plt.ylabel("Count")
 {% endhighlight %}
 
-<img src="/assets/img/norm_dist.JPG" width="200" height="200">
-<figcaption> Random sample from X </figcaption>
+<img src="/assets/img/hyptest/norm_dist.JPG" width="200" height="200">
 
 Cool! That is a fine normal distribution. Now we are ready to play around with it.
-]
-## Hypothesis test begins
+
+# Hypothesis test begins
 
 Ok, now let's get to hypothesis test. Basically, we are trying to check if some hypothesis can or cannot be rejected based on some sample data. But what does that mean?
 
 Before answering this question, let's define some basic concepts in order to understand it.
 
-- H0: the null hypothesis. This hypothesis can be interpreted as if there is no significant effect in our data. Given a certain test, we can only reject it or fail to reject it, never to confirm something. THIS IS VERY IMPORTANT TO REMEMBER;
-- H1: the alternative hypothesis. This hypothesis can be interpreted as if there IS some sort of effect observed in our data;
+- H0: the null hypothesis. This hypothesis can be interpreted as if there is no significant effect in our data. Given a certain test, we can only reject it or fail to reject it, never to confirm something. __THIS IS VERY IMPORTANT TO REMEMBER__;
+- H1: the alternative hypothesis. This hypothesis can be interpreted as if __there is__ some sort of effect observed in our data;
 - $$\alpha$$: The significante level. A threshold set to verify the validity of out test (usually set to 0.05);
 - $$\beta$$: The power of out test (actually, is $$1 - \beta$$);
 - p-value: that's a tricky one! p-value can be interpreted as the evidence against the null hypothesis. The smaller the p-value, the stronger the evidence you have to reject the null. It can also be interpreted as a probability of your result be completely random (or presenting no effect).
@@ -110,8 +109,7 @@ plt.title("Samples")
 plt.show()
 {% endhighlight %}
 
-<img src="/assets/img/samples.JPG" width="200" height="200">
-<figcaption> A few samples </figcaption>
+<img src="/assets/img/hyptest/samples.JPG" width="200" height="200">
 
 OK, so now we have 26 data points drawn from X. Suppose that we didn't know beforehand how this data was generated and we had to "guess" what is the mean of this generating process. Hypothesis test to the rescue!
 
@@ -121,62 +119,60 @@ First, I'd like to recommend [this article](https://towardsdatascience.com/stati
 
 After that, this case calls for an one sample t-test!
 
-## One sample t-test
+# One sample t-test
 
 Remember that we want to test our sample and "guess" its mean. By looking at the picture above, we cannot say for sure what is its value, but we can note that it may be close to 100.
 
-### First try: test against $\mu = 98$
+### First try: test against $$\mu = 98$$
 
 {% highlight python %}
 # Performing t-test against population mean of 98
 stats.ttest_1samp(sample, popmean = 98)
 {% endhighlight %}
-statistic=0.7153223258890102, 
-pvalue=0.48103766168299766
+`statistic=0.7153223258890102, pvalue=0.48103766168299766`
 
 The test returned 2 values, the statistic value, and the p-value. We are going to look only at p-values in this post (if you want to know more about the statistic, check out the article quoted above).
 
-Remember when I said that the smaller the p-value, the stronger the evidence against the null hypothesis? In this case we have a p-value of 0.028 (which is smaller than the significance level $\alpha = 0.05$) This can also be seen as a probability of 2.8% of the result been completely random (or in other words, presenting no effect).
+Remember when I said that the smaller the p-value, the stronger the evidence against the null hypothesis? In this case we have a p-value of 0.028 (which is smaller than the significance level $$\alpha = 0.05$$) This can also be seen as a probability of 4.8% of the result been completely random (or in other words, presenting no effect).
 
 In this case, H0 tells me that there is no difference between our sample mean and the probe mean from the t-test (98), and H1 tells me that there is some difference (which we can't measure so far).
 
 So, based in the t-test, we can __reject the null hypothesis__.
 
-### Second try: test against $\mu = 100$
+### Second try: test against $$\mu = 100$$
 
 {% highlight python %}
 # Performing t-test against population mean of 98
 stats.ttest_1samp(sample, popmean = 100)
 {% endhighlight %}
-statistic=-1.2267067388960058, 
-pvalue=0.23136103011689332
+`statistic=-1.2267067388960058, pvalue=0.23136103011689332`
 
-In this case, the test returned a p-value of 0.63. Again, that is 63% probably that our result are random. So we __fail to reject the null hypothesis__.
+In this case, the test returned a p-value of 0.23. Again, that is 23% probably that our result are random. So we __fail to reject the null hypothesis__.
 
 ## But wait... Let's take a step back.
 
 So you are telling me that we __cannot__ confirm the alternative hypothesis, right? Yes, the test can only tell my to reject or fail to reject the null hypothesis, and because of that I can't say that the alternative hypothesis is true. 
 Looking from the perspective of the p-value, there might be randomness in this result. What can I do about that? Is there a way to check if there is something wrong here? The answer is __yes__, we can check for __type-one and type-two error rates!__
 
-## A way to quantify our wrongness: Type-one and type-two error rates
+# A way to quantify our wrongness: Type-one and type-two error rates
 
-We kind of already know something about it. Remember the $\alpha$ and $\beta$ that I talked about earlier? They are the type-one and type-two error rates, respectivelly (or false positives and false negatives, if you will).
+We kind of already know something about it. Remember the $$\alpha$$ and $$\beta$$ that I talked about earlier? They are the type-one and type-two error rates, respectivelly (or false positives and false negatives, if you will).
 
 Basically, a false positive happens when my test tells me that the is a true effect, when there isn't; and a false negative happens when my test tells me that there isn't a true effect, and in fact there is.
 
-In terms of the concepts we've seen so far, a false positive happens when the my test tells me to reject the null hypothesis (p-value < $\alpha$) when I shouldn't, and a false negative happens when my test tells me to accept the null hypothesis (p-value > $\alpha$) when I souldn't. The image below can help you get it.
+In terms of the concepts we've seen so far, a false positive happens when the my test tells me to reject the null hypothesis (p-value < $$\alpha$$) when I shouldn't, and a false negative happens when my test tells me to accept the null hypothesis (p-value > $$\alpha$$) when I souldn't. The image below can help you get it.
 
-<img src="/assets/img/error_rates.JPG" width="200" height="200">
+<img src="/assets/img/hyptest/error_rates.JPG" width="200" height="200">
 <figcaption> Error rates </figcaption>
 
 We can also look at it in terms of sampling distributions, such as the image above.
 
-<img src="/assets/img/test.png" width="200" height="200">
+<img src="/assets/img/hyptest/test.png" width="200" height="200">
 <figcaption> Population mean comparison </figcaption>
 
 Now it makes more sense. We can formulate our hypothesis, run some cool statistical test, measure its results (p-values, in this article), and measure error rates. 
 
-In the examples above we've seen a hypothesis test performed by an one sample t-test of 26 samples against one mean $\mu$. But what if we had __26 different samples__? Will the results be the same?
+In the examples above we've seen a hypothesis test performed by an one sample t-test of 26 samples against one mean $$\mu$$. But what if we had __26 different samples__? Will the results be the same?
 
 ## Running multiple t-tests for different samples, p-values for everyone!
 
@@ -207,18 +203,18 @@ plt.title("Distribution of p-values for H0")
 plt.show()
 {% endhighlight %}
 
-<img src="/assets/img/h0.JPG" width="200" height="200">
+<img src="/assets/img/hyptest/h0.JPG" width="200" height="200">
 
 Wow! We've got a kind of uniform distribution on p-values! The histogram has 20 bins, which means that there is about 500 p-values per bin. But what does that mean? 
 
-For starters, our random variable __X__ has $\mu = 100$, and our samples were tested against $\mu_{test} = 100$. This means that there is no effect to be observed in this scenario. Hence, we would've expected p-values > $\alpha$ (the significance level). But remember that we have some error rates (in this case, only false positives, since there is no true effect).
+For starters, our random variable __X__ has $$\mu = 100$$, and our samples were tested against $$\mu_{test} = 100$$. This means that there is no effect to be observed in this scenario. Hence, we would've expected p-values > $$\alpha$$ (the significance level). But remember that we have some error rates (in this case, only false positives, since there is no true effect).
 
 And the cool thing is, if you get all p-values in the first bin (from 0 to 0.05), and divide it by the total number of simulations, we get:
 
 {% highlight python %}
 len(np.where(np.array(pvalues) < 0.05)[0])/N_SIM 
 {% endhighlight %}
-0.051
+`0.051`
 
 which is the type-one error rate for this experiment! Told you that this would be cool!
 
@@ -246,25 +242,18 @@ plt.title("Distribution of p-values for H1")
 plt.show()
 {% endhighlight %}
 
-<img src="/assets/img/h1.JPG" width="200" height="200">
+<img src="/assets/img/hyptest/h1.JPG" width="200" height="200">
 
 Another cool thing happened! In this plot, we can see that a lot of p-values were binned in 0 to 0.05! That's expected, since $\mu = 100$, and our samples were tested against $\mu_{test} = 103$ (meaning that there is some sort of effect). In this case, we can calculate the false negatives, which is all the p-values that fell above $\alpha = 0.05$
 
 {% highlight python %}
 1 - len(np.where(np.array(pvalues) < 0.05)[0])/N_SIM 
 {% endhighlight %}
-0.1669
+`0.1669`
 
-which is the value of $\beta$! The term $1-\beta$ is the __power__ of our test, or the number of times that the test was actually right.
-
-And that is pretty much it! We have finished our tour on hypothesis test!
-
-In the next posts I'll explore the concept of the Likelihood functions and Bayes Factors, and how to do hypothesis tests with it! See you there.
-
-which is the value of $\beta$! The term $1-\beta$ is the __power__ of our test, or the number of times that the test was actually right.
+which is the value of $$\beta$$! The term $$1-\beta$$ is the __power__ of our test, or the number of times that the test was actually right.
 
 And that is pretty much it! We have finished our tour on hypothesis test!
-
 In the next posts I'll explore the concept of the Likelihood functions and Bayes Factors, and how to do hypothesis tests with it! See you there.
 
 # Awesome science applications

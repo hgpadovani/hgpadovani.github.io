@@ -6,19 +6,24 @@ date: 2016-03-21
 comments: false
 ---
     
-<center> Hello, I'm Hugo Padovani =) </center>
+<center> Olá, Meu nome é Hugo Padovani =) </center>
 
 ## Who am I?
 
-<img src="/assets/img/me200.jpg" width="200" height="200">
-<figcaption> "Such a cool guy!" </figcaption>
+<img src="/assets/img/about/me.jpg" width="200" height="200">
+<figcaption> Este sou eu! </figcaption>
 
+Sou um Cientista de Dados apaixonado por Data Science, Machine Learning, Astronomia, Astrofísica e ciência em geral. Sou graduado em Engenharia Elétrica pela UNICAMP, e tive a oportunidade de realizar intercâmbio acadêmico para Melbourne, na Austrália, na Monash University.
 
-I'm a Data Scientist from Brazil! I'm passionate about data science, machine learning and astronomy/astrophysics. I graduated in Electrical Engineering from University of Campinas (UNICAMP), and I had the opportunity to study abroad in Australia, Melbourne, on Monash University.
+Atualmente estou trabalhando em uma empresa do mercado imobiliário, onde posso aplicar técnicas de Machine Learning diariamente para resolver uma gama de problemas super interessantes!
 
-Today I'm currently working in a banking institution, where I can apply Machine Learning on daily basis to solve a great deal of problems, such as how to detect fraudulent transactions in credit cards, how to prevent money laundering when opening a relationship with a customer, how to lift your investments, and so on.
+## Por quê estou criando este blog?
 
-## Why am I doing this blog?
+Sempre fui apaixonado por ciência e muito questionador desde quando era criança, muito curioso em saber como as coisas funcionam e porque o universo é como é. Eu não me contentava com uma resposta do tipo "as coisas são assim porque sim", isso me deixava incomodado, pois é um pensamento muito simplista e preguiçoso. 
+
+Portanto, a ideia desse blog é trazer conteúdo que possa ser útil e interessante, sempre buscando ir a fundo onde profundidade é necessária.
+
+Acredito que muitas pessoas não saibam 
 
 I've always been in love with science. Every since I was a child I used to ask questions about everything, always curious about how stuff works, and why the universe is what it is. Later on I've come across with the **scientific method**, a step-by-step way of thinking that scientists follows in order to create knowledge and develop science.
 

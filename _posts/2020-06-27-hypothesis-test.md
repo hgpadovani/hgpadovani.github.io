@@ -7,7 +7,7 @@ tag:
 - Hypothesis test 
 - p-value
 - statistics
-feature: asset/img/test.png
+feature: asset/img/hyptest/norm_dist.JPG
 comments: true
 ---
 
@@ -128,11 +128,11 @@ Remember that we want to test our sample and "guess" its mean. By looking at the
 # Performing t-test against population mean of 98
 stats.ttest_1samp(sample, popmean = 98)
 {% endhighlight %}
-`statistic=0.7153223258890102, pvalue=0.48103766168299766`
+`statistic=2.178617376831721, pvalue=0.038996664102786405`
 
 The test returned 2 values, the statistic value, and the p-value. We are going to look only at p-values in this post (if you want to know more about the statistic, check out the article quoted above).
 
-Remember when I said that the smaller the p-value, the stronger the evidence against the null hypothesis? In this case we have a p-value of 0.028 (which is smaller than the significance level $$\alpha = 0.05$$) This can also be seen as a probability of 4.8% of the result been completely random (or in other words, presenting no effect).
+Remember when I said that the smaller the p-value, the stronger the evidence against the null hypothesis? In this case we have a p-value of 0.038 (which is smaller than the significance level $$\alpha = 0.05$$) This can also be seen as a probability of 3.8% of the result been completely random (or in other words, presenting no effect).
 
 In this case, H0 tells me that there is no difference between our sample mean and the probe mean from the t-test (98), and H1 tells me that there is some difference (which we can't measure so far).
 
@@ -144,9 +144,9 @@ So, based in the t-test, we can __reject the null hypothesis__.
 # Performing t-test against population mean of 98
 stats.ttest_1samp(sample, popmean = 100)
 {% endhighlight %}
-`statistic=-1.2267067388960058, pvalue=0.23136103011689332`
+`statistic=0.5828593635524083, pvalue=0.565208909198961`
 
-In this case, the test returned a p-value of 0.23. Again, that is 23% probably that our result are random. So we __fail to reject the null hypothesis__.
+In this case, the test returned a p-value of 0.56. Again, that is 56% probably that our result are random. So we __fail to reject the null hypothesis__.
 
 ## But wait... Let's take a step back.
 

@@ -7,7 +7,7 @@ tag:
 - Hypothesis test 
 - p-value
 - statistics
-feature: asset/img/hyptest/norm_dist.JPG
+feature: "/assets/img/hyptest/norm_dist.JPG"
 comments: true
 ---
 

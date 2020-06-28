@@ -162,13 +162,13 @@ Basically, a false positive happens when my test tells me that the is a true eff
 
 In terms of the concepts we've seen so far, a false positive happens when the my test tells me to reject the null hypothesis (p-value < $$\alpha$$) when I shouldn't, and a false negative happens when my test tells me to accept the null hypothesis (p-value > $$\alpha$$) when I souldn't. The image below can help you get it.
 
-<img src="/assets/img/hyptest/error_rates.JPG" width="200" height="200">
-<figcaption> Error rates </figcaption>
+<img src="/assets/img/hyptest/error_rates.jpeg" width="200" height="200">
+<figcaption text-align: center> Error rates </figcaption>
 
 We can also look at it in terms of sampling distributions, such as the image above.
 
 <img src="/assets/img/hyptest/test.png" width="200" height="200">
-<figcaption> Population mean comparison </figcaption>
+<figcaption text-align: center> Population mean comparison </figcaption>
 
 Now it makes more sense. We can formulate our hypothesis, run some cool statistical test, measure its results (p-values, in this article), and measure error rates. 
 

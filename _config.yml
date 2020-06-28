@@ -4,8 +4,8 @@ bio:                'A blog for sharing my experiments on Data Science, Machine 
 description:        "This is my blog."
 reading_time:       true
 words_per_minute:   200
-logo:               'assets/img/saturn5.jpg'
-background:         'assets/img/background.jpg'
+logo:               'assets/img/home/saturn.jpg'
+background:         'assets/img/home/background.jpg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
 url:                https://hgpadovani.github.io
@@ -50,7 +50,7 @@ instagram:          hgpadovani
 #medium:            '@username'
 #pinterest:         username
 #foursquare:        username
-steam:              hgpadovani
+#steam:              hgpadovani
 #dribbble:          username
 #youtube:           username
 #youtube-channel:   channel

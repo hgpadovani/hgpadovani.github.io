@@ -4,11 +4,10 @@ title:  "Hypothesis test: how to do it right."
 date:   2020-06-27
 excerpt: "Hypothesis test and p-values from a different perspective."
 tag:
-- markdown 
-- syntax
-- sample
-- test
-- jekyll
+- Hypothesis test 
+- p-value
+- statistics
+feature: asset/img/test.png
 comments: true
 ---
 

@@ -6,26 +6,21 @@ date: 2016-03-21
 comments: false
 ---
     
-<center> Olá, Meu nome é Hugo Padovani =) </center>
+<center> Hi, my name is Hugo Padovani =) </center>
 
 ## Who am I?
 
 <img src="/assets/img/about/me.jpg" width="200" height="200">
-<figcaption> Este sou eu! </figcaption>
 
-Sou um Cientista de Dados apaixonado por Data Science, Machine Learning, Astronomia, Astrofísica e ciência em geral. Sou graduado em Engenharia Elétrica pela UNICAMP, e tive a oportunidade de realizar intercâmbio acadêmico para Melbourne, na Austrália, na Monash University.
+I'm a data scientist in love with machine learning, astronomy, astrophisics and science in general. 
 
-Atualmente estou trabalhando em uma empresa do mercado imobiliário, onde posso aplicar técnicas de Machine Learning diariamente para resolver uma gama de problemas super interessantes!
+Currently I'm working on a real estate company, where I get to apply Machine Learning techniques on daily basis to solve super interesting problems.
 
-## Por quê estou criando este blog?
+## Why am I doing this blog?
 
-Sempre fui apaixonado por ciência e muito questionador desde quando era criança, muito curioso em saber como as coisas funcionam e porque o universo é como é. Eu não me contentava com uma resposta do tipo "as coisas são assim porque sim", isso me deixava incomodado, pois é um pensamento muito simplista e preguiçoso. 
+I've always been in love with science. Every since I was a child I used to ask questions about everything, always curious about how stuff works, and why the universe is what it is. Due to this curious nature of mine, I've jumped into studying science all the way, and became even more in love with it. 
 
-Portanto, a ideia desse blog é trazer conteúdo que possa ser útil e interessante, sempre buscando ir a fundo onde profundidade é necessária.
-
-Acredito que muitas pessoas não saibam 
-
-I've always been in love with science. Every since I was a child I used to ask questions about everything, always curious about how stuff works, and why the universe is what it is. Later on I've come across with the **scientific method**, a step-by-step way of thinking that scientists follows in order to create knowledge and develop science.
+One of the fundamental concepts in science is always to ask questions about the world, to formulate hypothesis and how to correctly test them in order to get a good feeling of what is going on around us. This is called the **scientific method**, a step-by-step way of thinking that scientists follows in order to create knowledge and develop science.
 
 In a nutshell, it works as follows:
 

@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Teste de Hipóteses: porquê e como."
+title:  "Hypothesis testÇ how to do it right."
 date:   2020-06-27
-excerpt: "Just about everything you'll need to style in the theme: headings, paragraphs, blockquotes, tables, code blocks, and more."
+excerpt: "Hypothesis test and p-values from a different perspective."
 tag:
 - markdown 
 - syntax
@@ -12,7 +12,7 @@ tag:
 comments: true
 ---
 
-# Motivação
+# Motivation
 
 In this post, I'll try to explain the concept of p-values from a different perspective. 
 
@@ -31,15 +31,15 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 {% endhighlight %}
 
-# Now, let's define the sample size, $\mu$ and $\sigma$ for normal distribution
+# Now, let's define the sample size, $$\mu$$ and $$\sigma$$ for normal distribution
 
 First, let's define some constants. We will work with normal distributions following the equation above.
 
 $$ f(x) = \frac{1}{\sigma\sqrt{2.\pi}} \exp \frac{-1}{2}\left(\frac{x - \mu}{\sigma^2}\right) $$
 
 where:
-- \\( mu \\): the mean of the distribution;
-- \\( sigma \\): the variance;
+- $$\mu$$: the mean of the distribution;
+- $$\sigma$$: the variance;
 - x: out sample vctor;
 
 With this, we can create some random variable X and sample from it.
@@ -71,7 +71,7 @@ plt.xlabel("Large sample size")
 plt.ylabel("Count")
 {% endhighlight %}
 
-<img src="/assets/img/norm_dist.jpg" width="200" height="200">
+<img src="/assets/img/norm_dist.JPG" width="200" height="200">
 <figcaption> Random sample from X </figcaption>
 
 Cool! That is a fine normal distribution. Now we are ready to play around with it.
@@ -84,8 +84,8 @@ Before answering this question, let's define some basic concepts in order to und
 
 - H0: the null hypothesis. This hypothesis can be interpreted as if there is no significant effect in our data. Given a certain test, we can only reject it or fail to reject it, never to confirm something. THIS IS VERY IMPORTANT TO REMEMBER;
 - H1: the alternative hypothesis. This hypothesis can be interpreted as if there IS some sort of effect observed in our data;
-- $\alpha$: The significante level. A threshold set to verify the validity of out test (usually set to 0.05);
-- $\beta$: The power of out test (actually, is $1 - \beta$);
+- $$\alpha$$: The significante level. A threshold set to verify the validity of out test (usually set to 0.05);
+- $$\beta$$: The power of out test (actually, is $$1 - \beta$$);
 - p-value: that's a tricky one! p-value can be interpreted as the evidence against the null hypothesis. The smaller the p-value, the stronger the evidence you have to reject the null. It can also be interpreted as a probability of your result be completely random (or presenting no effect).
 
 Wow, a ton of new concepts! Don't worry, they will be explained shortly =)
@@ -110,7 +110,7 @@ plt.title("Samples")
 plt.show()
 {% endhighlight %}
 
-<img src="/assets/img/samples.jpg" width="200" height="200">
+<img src="/assets/img/samples.JPG" width="200" height="200">
 <figcaption> A few samples </figcaption>
 
 OK, so now we have 26 data points drawn from X. Suppose that we didn't know beforehand how this data was generated and we had to "guess" what is the mean of this generating process. Hypothesis test to the rescue!
@@ -166,7 +166,7 @@ Basically, a false positive happens when my test tells me that the is a true eff
 
 In terms of the concepts we've seen so far, a false positive happens when the my test tells me to reject the null hypothesis (p-value < $\alpha$) when I shouldn't, and a false negative happens when my test tells me to accept the null hypothesis (p-value > $\alpha$) when I souldn't. The image below can help you get it.
 
-<img src="/assets/img/error_rates.jpg" width="200" height="200">
+<img src="/assets/img/error_rates.JPG" width="200" height="200">
 <figcaption> Error rates </figcaption>
 
 We can also look at it in terms of sampling distributions, such as the image above.
@@ -207,7 +207,7 @@ plt.title("Distribution of p-values for H0")
 plt.show()
 {% endhighlight %}
 
-<img src="/assets/img/h0.jpg" width="200" height="200">
+<img src="/assets/img/h0.JPG" width="200" height="200">
 
 Wow! We've got a kind of uniform distribution on p-values! The histogram has 20 bins, which means that there is about 500 p-values per bin. But what does that mean? 
 
@@ -224,7 +224,7 @@ which is the type-one error rate for this experiment! Told you that this would b
 
 ### H1 - Samples with mean 103
 
-{% highlight css %}
+{% highlight python %}
 # Defining mu_test
 mu_test = 103
 
@@ -246,7 +246,7 @@ plt.title("Distribution of p-values for H1")
 plt.show()
 {% endhighlight %}
 
-<img src="/assets/img/h1.jpg" width="200" height="200">
+<img src="/assets/img/h1.JPG" width="200" height="200">
 
 Another cool thing happened! In this plot, we can see that a lot of p-values were binned in 0 to 0.05! That's expected, since $\mu = 100$, and our samples were tested against $\mu_{test} = 103$ (meaning that there is some sort of effect). In this case, we can calculate the false negatives, which is all the p-values that fell above $\alpha = 0.05$
 

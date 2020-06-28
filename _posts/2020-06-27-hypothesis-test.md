@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Hypothesis testÇ how to do it right."
+title:  "Hypothesis test: how to do it right."
 date:   2020-06-27
 excerpt: "Hypothesis test and p-values from a different perspective."
 tag:

@@ -1,6 +1,6 @@
 # Site
 title:              Hugo's Blog.
-bio:                'A blog for sharing my experiments on Data Science, Machine Learning and some other stuffs.'
+bio:                'A blog for sharing my experiments on data science, machine learning and cool science stuff.'
 description:        "This is my blog."
 reading_time:       true
 words_per_minute:   200

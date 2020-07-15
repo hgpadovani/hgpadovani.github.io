@@ -8,7 +8,7 @@ tag:
 - likelihood
 - statistics
 - bayesian statistics
-feature: "/assets/img/hyptest/norm_dist.JPG"
+feature: "/assets/img/likbayes/likelihood.PNG"
 comments: true
 ---
 

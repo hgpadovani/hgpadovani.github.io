@@ -243,7 +243,7 @@ plt.show()
 
 <img src="/assets/img/hyptest/h1.JPG" width="200" height="200">
 
-Another cool thing happened! In this plot, we can see that a lot of p-values were binned in 0 to 0.05! That's expected, since $\mu = 100$, and our samples were tested against $\mu_{test} = 103$ (meaning that there is some sort of effect). In this case, we can calculate the false negatives, which is all the p-values that fell above $\alpha = 0.05$
+Another cool thing happened! In this plot, we can see that a lot of p-values were binned in 0 to 0.05! That's expected, since $$\mu = 100$$, and our samples were tested against $$\mu_{test} = 103$$ (meaning that there is some sort of effect). In this case, we can calculate the false negatives, which is all the p-values that fell above $$\alpha = 0.05$$
 
 {% highlight python %}
 1 - len(np.where(np.array(pvalues) < 0.05)[0])/N_SIM 

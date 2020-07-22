@@ -18,7 +18,7 @@ In the [previous post](https://hgpadovani.github.io/hypothesis-test/) we talked 
 
 In this post, I'll show how to apply those concepts in order to best describe a gerative process (which is a random variable), and how to make a good guess on its parameters.
 
-## Why is this relevante?
+## Why is this relevant?
 
 There is a lot of phenomenons in nature that can be modeled as a gerative process, and for that, it is important to estimate its parameters to fully understand them. The techniques described in this post and the previous one are broadly used in science to test several hypothesis.
 
